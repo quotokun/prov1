@@ -18,7 +18,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
+// Route::middleware('check_api_key')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
 Route::middleware('check_api_key')->group(function () {
     // Place your protected routes here
